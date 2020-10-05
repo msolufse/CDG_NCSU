@@ -1,4 +1,5 @@
-# CDG NCSU
+# [Cardiovascular Dynamics Group](https://wp.math.ncsu.edu/cdg/) at [North Carolina State University](https://math.sciences.ncsu.edu/)
+
 This is an online repository of presentations, code, and manuscripts that have been created by the Cardiovascular Dynamics Group at North Carolina State University.
 
 
