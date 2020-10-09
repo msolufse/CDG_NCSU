@@ -9,3 +9,5 @@ Please reference the LICENSE file for pertinent information regarding data and c
 THESE FILES COME WITH NO GUARANTEE OR WARRANTY.
 
 Questions should be sent to Mette Olufsen at msolufse (at) ncsu (dot) edu.
+
+Here is a line of text.
