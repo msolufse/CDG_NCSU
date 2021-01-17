@@ -1,10 +1,13 @@
  % solves the model and plots solutions against data
 % DRIVERBASIC.M
 
-function Driver_treatment(PATIENT,TREATMENT)%data,xopt,I,fig
+function [p,V,q] = Driver_treatment(PATIENT,TREATMENT)%data,xopt,I,fig
 global ODE_TOL REL_TOL
 
-filename = strcat('Pat',num2str(PATIENT),'_res2_opt.mat');
+if PATIENT==6
+    error('NO TREATMENT FOR NORMOTENSIVE PATIENT. EXITING');
+end
+filename = strcat('Data_Parameters/Pat',num2str(PATIENT),'_res2_opt.mat');
 %% Load in the data and parameters to be used in the model.
 % load the optimized file
 load(filename,'data','pars');
@@ -371,6 +374,11 @@ hold off;
 
 h = figure(2);
 h.Position = [379   778   951   552]; legend off
+
+% Store pressure, volume, and flow values
+p = [pla plv psa psv pra prv ppa psv];
+V = [Vla Vlv Vsa Vsv Vra Vrv Vpa Vsv];
+q = [qmva qava qs qsv qtva qpva qp qpv];
 end 
 
 

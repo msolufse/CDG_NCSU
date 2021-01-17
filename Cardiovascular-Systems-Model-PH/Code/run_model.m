@@ -9,4 +9,4 @@
 clear; clc;
 PATIENT = 1;  %% Change for each patient (1-5), or use 6 for normotensive
 RESIDUAL = 2; %% Change for each residual (1-2)
-Driver_postopt(PATIENT,RESIDUAL);
+[p,V,q] = Driver_postopt(PATIENT,RESIDUAL); % Returns pressure, volume, flow
