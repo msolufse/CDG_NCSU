@@ -1,0 +1,24 @@
+FC=/usr/local/bin/gfortran
+
+all: treebranch_mean
+
+treebranch_mean.o: treebranch_mean.f90 f90_tools.mod tree_pres_mean.mod
+	$(FC) -c treebranch_mean.f90
+
+f90_tools.o: f90_tools.f90
+	$(FC) -c f90_tools.f90
+
+f90_tools.mod: f90_tools.f90
+	$(FC) -c f90_tools.f90
+
+tree_pres_mean.o: tree_pres_mean.f90 f90_tools.mod
+	$(FC) -c tree_pres_mean.f90
+
+tree_pres_mean.mod: tree_pres_mean.f90 f90_tools.mod
+	$(FC) -c tree_pres_mean.f90
+
+treebranch_mean: treebranch_mean.o f90_tools.o tree_pres_mean.o
+	$(FC) -o treebranch_mean treebranch_mean.o f90_tools.o tree_pres_mean.o
+
+clean: 
+	rm -f *.o *.mod *.2d treebranch_mean
