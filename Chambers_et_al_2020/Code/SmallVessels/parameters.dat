@@ -1,0 +1,44 @@
+Parameter file for systemic & pulmonary runs v.2 - nah 26/8/09
+Enter values on separate lines to allow free format reading by both C++ and f90 programs.
+
+Period in alphabranch.f90 is dimensionless Tper in sor06.h
+0.11
+
+terminal resistance - trm_rst in alphabranch.f90
+0.0
+
+f1, f2, f3 in sor06  1.99925e07 -25.5267 465251
+10000 -50 36000
+
+ff1  ff2   ff3 in alphabranch.f90 and root_imp.f90. 
+50000 -60 20000
+
+r_root
+0.021
+
+r_min. rm in sor06.C
+0.005
+
+alpha in tree_pres.f90 and root_imp.f90. also in plotresults.m
+0.88370
+
+beta in tree_pres.f90 and root_imp.f90. also in plotresults.m
+0.66660
+
+lrr in tree_pres.f90 and root_imp.f90. also in plotresults.m
+1.0
+
+maxgen in tree_pres.f90 and root_imp.f90; also in plotresults.m
+100
+
+tmstps in alphabranch; should match plts in sor06.h
+1024
+
+tmstps in sor06.C (not the same as in alphabranch!)
+1024
+
+maxStat in tree_pres3.f90 and alphabranch3
+1000
+
+deltaR in tree_pres3.f90 and alphabranch3
+0.001
