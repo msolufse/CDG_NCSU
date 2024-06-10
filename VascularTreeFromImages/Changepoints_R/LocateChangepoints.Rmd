@@ -1,0 +1,27 @@
+---
+title: "Change Points"
+author: "Alyssa LaPole"
+date: '2023-01-25'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(segmented)
+library(EnvCpt)
+library(changepoint)
+library(readxl)
+library(tidyverse)
+library(interp)
+library(openxlsx)
+```
+```{r, include = FALSE}
+source("GlobalFunctions.R")
+data = LargeExcel("CLDaEXPORT.xlsx")
+FindChangepoints(data, q=4, plot = TRUE, 'FILE.xlsx')
+```
+
+
+
+
+
